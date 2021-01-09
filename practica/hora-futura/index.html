@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hora futura</title>
+</head>
+<body>
+
+  <p>Escriba un programa que pregunte al usuario la hora actual t del reloj y un número entero de horas h, que indique qué hora marcará el reloj dentro de h horas:</p>
+  <script>
+    var dia = 24;
+    var horaActual = Number(prompt("que hora es?"))
+    var numeroEntero = Number(prompt("indicame un numero entero , para devolverte la hora futura"))
+    var horaFutura = (horaActual + numeroEntero) % dia;
+    console.log("en " + numeroEntero + " horas, el reloj marcara las " + horaFutura)
+  </script>
+</body>
+
+</html>

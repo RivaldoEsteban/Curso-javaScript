@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <form name="selectForm" >
+    <p>
+      <label for="flavorsTypes">elige algunos sabores y luego haz click en el boton</label>
+      <select id="flavorsTypes" name="flavorsTypes" multiple="multiple">
+        <option selected="selected">chocolate</option>
+        <option>fresa</option>
+        <option>vainilla</option>
+        <option>lucuma</option>
+        <option>mango</option>
+        <option>chocochips</option>
+        <option>menta</option>
+      </select>
+    </p>
+    <p>
+      <input id="flavorsChosen" type="button" value="Usted eligio los siguientes sabores:">
+    </p>
+  </form>
+  <script>
+    function howMany(select) {
+      let numberSelected = 0;
+      for (let i = 0; i < select.options.length; i++) {
+        if(select.options[i].selected){
+          numberSelected++;
+        }
+      }
+      return numberSelected;
+    }
+
+    let flavorsChosen = document.getElementById('flavorsChosen');
+    flavorsChosen.addEventListener('click', function () {
+      alert('Numero de opciones seleccionadas: ' + howMany(document.selectForm.flavorsTypes));
+    });
+  </script> -->
+    <script>
+      // var hola;
+      // for(hola = 20; hola > 11; hola--) {
+      //   console.log(hola);
+      // };
+      let sabores = ["chocolate", "fresa", "mango", "lucuma", "chips"];
+
+      function electionflavor(sabor) {
+        console.log(`elegiste el sabor ${sabor}`);
+      }
+      for (var i = 0; i < sabores.length; i++) {
+        electionflavor(sabores[i]);
+      }
+      for (let sabor of sabores) {
+        console.log("sabor " + sabor);
+      }
+
+      var conteo;
+      for (conteo = 0; conteo < 11; conteo++) {
+        console.log(conteo);
+      }
+
+      let agregarsabor = sabores.push("papaya");
+      console.log(sabores);
+      var quitarFruta = sabores.pop();
+      console.log(sabores);
+      const newFruit = sabores.unshift("uvas");
+      console.log(sabores);
+      console.log(sabores[0]);
+
+      let n = 0;
+      let z = 0;
+
+      while (n < 4) {
+        n++;
+        z += n;
+        console.log(n);
+        console.log(z);
+      }
+      let numero = 0;
+      do {
+        numero += 1;
+        console.log(numero);
+      } while (numero < 5);
+    </script>
+  </body>
+</html>

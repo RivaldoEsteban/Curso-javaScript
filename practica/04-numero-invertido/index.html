@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Número invertido</title>
+</head>
+<body>
+  <p>escribe un programa que pide al usuario un numero entero de 3 digitos y entregue el numero con los digitos en orden inverso</p>
+  <script>
+    var numero = prompt("Escribe un numero con 3 digitos")
+    function reverse (numberlist) {
+      var resultado = "";
+      for(let i = numberlist.length - 1; i >= 0 ; i-- ){
+        resultado = resultado + numberlist[i];
+      }
+      console.log(resultado);
+      return resultado;
+    }
+    var reverseNumero = Number(reverse(numero));
+    console.log(reverseNumero)
+
+  </script>
+</body>
+</html>

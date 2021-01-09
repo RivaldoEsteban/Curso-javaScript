@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Escriba un programa que entregue la parte decimal de un número real ingresado por el usuario.</p>
+  <script>
+    var numero = Number(Math.abs(prompt("digita culaquier numero entero con decimales")) )
+    var decimal = (numero % 1);
+    var decimalredondeado = decimal.toFixed(2)
+      alert("esta es la parte decimal de tu numero " + decimalredondeado)
+    // if(numero > 0){
+    // }else if (numero < 0) {
+    //   var resultado = Math.abs(numero)
+    //   alert("esta es la parte decimal " + decimalredondeado)
+    // }
+    //Para convertir de negativo a positivo let x = -54; let result = Math.abs(x);
+    // var numero = (123123.123123).toFixed(2)
+    // alert(numero)
+  </script>
+</body>
+</html>

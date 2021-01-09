@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circulos</title>
+</head>
+<body>
+  <p>escribe un programa que reciba como entrada el radio de un circulo y entregue como salida el perimetro y su área</p>
+  <script>
+    var radio = prompt("cuál es el radio de tu circulo?")
+    var area = (Math.PI * Math.pow(radio, 2)).toFixed(1);
+    var perimetro = (2 * Math.PI * radio).toFixed(1);
+    console.log("este es el valor de tu perimetro " + perimetro)
+    console.log("este es el valor de tu area " + area);
+    // console.log(Math.PI)
+  </script>
+</body>
+</html>

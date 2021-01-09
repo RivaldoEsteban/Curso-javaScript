@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var mercedes = "mercedes"
+    var mazda = "mazda"
+    var toyota = "toyota"
+    var ferrari = "ferrari"
+    var precio;
+    var mensaje;
+
+    var carElection = prompt("que carro vas a comprar ?\n Mercedes \n Mazda \n Toyota \n Ferrari" );
+    switch(carElection) {
+      case mercedes :
+        var precio = 8000;
+        alert("El precio del Mercedes es " + precio + " dolares ");
+        break;
+      case mazda :
+        var precio = 5080;
+        alert("El precio del mazda  es " + precio + " dolares ");
+        break;
+      case toyota :
+        var precio = 10000;
+        alert("El precio del toyota es " + precio + " dolares ");
+        break;
+      case ferrari :
+        var precio = 200000;
+        alert("El precio del ferrari es " + precio + " dolares ");
+        console.log("El precio del ferrari es " + precio);
+        break;
+      default :
+        var mensaje = "Elige una opción correcta"
+    }
+  </script>
+</body>
+</html>

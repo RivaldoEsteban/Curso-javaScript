@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="text-transform: capitalize">
+  <h1>dibujando con canvas</h1>
+  <p>
+    cuantas lineas quieres ?
+    <input type="text" value="" id="text_linea">
+    <input type="button" value="click" id="button">
+  </p>
+  <canvas width="300" height="300" id="dibujo"></canvas>
+  <p>asi queda tu dibujo con canvas </p>
+
+  <script>
+
+    var texto = document.getElementById("text_linea");
+    var boton = document.getElementById("button");
+    boton.addEventListener('click', dibujoPorClick );
+
+    var a = document.getElementById('dibujo');
+    var lienzo = a.getContext("2d");
+    var ancho = a.width;
+    console.log(ancho)
+
+    function  dibujarLinea(color,x_inicial,y_inicial,x_final,y_final) {
+      lienzo.beginPath(); //incializa
+      lienzo.strokeStyle = color;
+      lienzo.moveTo(x_inicial, y_inicial);
+      lienzo.lineTo(x_final, y_final);
+      lienzo.stroke();
+      lienzo.closePath(); // finaliza
+    }
+
+    function dibujoPorClick () {
+      var x = parseInt(texto.value);
+      var espacio = ancho / x;
+      console.log(espacio)
+      var contar = 0;
+      var xi,yi, xf,yf;
+      for(contar = 0; contar < x ; contar++){
+
+
+        xi = espacio * contar;
+        xf = espacio * (contar + 1);
+
+        xf = espacio * contar;
+        yf = espacio * (contar + 1);
+
+
+        dibujarLinea("black", xi, 0, 300, yf);
+        dibujarLinea("black", xi, 300, 0, yf);//abajo
+        dibujarLinea("black",0,0,300,0);
+        dibujarLinea("black",300,0,300,300);
+        dibujarLinea("black",300,300,0,300);
+        dibujarLinea("black",0,300,0,0);
+      }
+    }
+  </script>
+</body>
+</html>
